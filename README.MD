@@ -77,7 +77,7 @@ module.exports = router;
   ```jsx
      const Book = require('../model/books');
 
-// GET all books
+ 
 const getBooks = async (req, res) => {
     try {
         const books = await Book.find();
@@ -87,7 +87,7 @@ const getBooks = async (req, res) => {
     }
 };
 
-// GET single book by ID
+ 
 const getBooksInfo = async (req, res) => {
     try {
         const book = await Book.findById(req.params.id);
@@ -98,7 +98,7 @@ const getBooksInfo = async (req, res) => {
     }
 };
 
-// POST a new book
+ 
 const createBooks = async (req, res) => {
     try {
         const book = new Book(req.body);
@@ -109,7 +109,7 @@ const createBooks = async (req, res) => {
     }
 };
 
-// PUT (Update) a book
+ 
 const updateBooks = async (req, res) => {
     try {
         const updatedBook = await Book.findByIdAndUpdate(req.params.id, req.body, { new: true });
@@ -120,7 +120,7 @@ const updateBooks = async (req, res) => {
     }
 };
 
-// DELETE a book
+ 
 const deleteBooks = async (req, res) => {
     try {
         const deletedBook = await Book.findByIdAndDelete(req.params.id);
